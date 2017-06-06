@@ -1,18 +1,39 @@
-#	Simple Neural Network from scratch
+# Simple Neural Network from scratch
 
 A simple python implementation of Neural Network from scratch without using any ML/DL libraries
 
-Dataset used : MNIST Handwritten Digits
+![alt text](cost_VS_iter.png)
 
-Dependencies :
-1) Numpy
-2) Scipy
-3) Matplotlib
-4) Pickle
+## Getting Started
 
-How to use?
-1) Clone the repository
-2) Run the main.py file to train the Neural Network
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Dataset contain 5000 20*20 pixel images labeled with 0-9 digits
-Accuracy achieved over 95% in under 500 iterations
+### Prerequisites
+
+
+```
+* [Numpy](http://www.numpy.org/) - Multidimensioanl Mathematical Computing 
+* [Scipy](https://docs.scipy.org/doc/) - Was used to load Mat file in Python
+* [Matplotlib](https://matplotlib.org/contents.html) - Used to plot Graph
+* [Pickle](https://docs.python.org/3/library/pickle.html) - Used to save trained models/object
+
+```
+
+### Installing
+
+Clone the repository
+
+```
+git clone https://github.com/zishansami102/Handwritten-digits-classifier-NN
+```
+Move into the directory and then run the following command to start training the neural network
+
+```
+python main.py
+```
+
+## Contributing
+
+Contributions are welcome of course ;)
+
+
