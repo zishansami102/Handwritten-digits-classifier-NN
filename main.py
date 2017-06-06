@@ -11,6 +11,7 @@ def sigmGrad(a):
 
 #	getting paramater's gradient
 def getgrad(X, y, theta1, theta2, regconst):
+		# Feedforwarding to get all the layers ofr the current parameter
 		(n, m) = X.shape
 		a1 = np.vstack((np.ones((1,m)),X))
 		z2 = np.dot(theta1.T, a1)
@@ -19,10 +20,12 @@ def getgrad(X, y, theta1, theta2, regconst):
 		theta1F = theta1[1:,:]
 		theta2F = theta2[1:,:]
 
+		# Logistic Regression Cost function
 		cost = np.sum(np.sum( -y*np.log(a3) - (1-y)*np.log(1-a3) ))/m + (regconst/(2*m))*(sum(sum(theta1F*theta1F))+sum(sum(theta2F*theta2F)))
+		
+		# Backpropagating and calculating gradient
 		d3 = a3 - y
 		d2 = (theta2F.dot(d3))*sigmGrad(z2)
-
 		tri2 = d3.dot(a2.T)
 		tri1 = d2.dot(a1.T)
 		theta2Grad = tri2.T/m + (regconst/m)*np.vstack((np.zeros((1,l2)),theta2F))
@@ -94,10 +97,14 @@ X = X_dash.T	# n * m
 tempY = y_dash.T	# 1 * m
 (n, m) = X.shape
 
-tempY = tempY*(tempY!=10)	# changin value with 10 back to 0.
+tempY = tempY*(tempY!=10)	# changing value with 10 back to 0.(Digit '0' was represented by '10'. Coverting back to '0' to have simple calculations)
 
 y = np.zeros((l2,m))	# l2 * m
-for i in range(0,m):
+
+# Converting Digit representation Matrix representation of digits. 
+# [0,0,1,0,0,0,0,0,0,0] will mean digit '2' and
+# [0,0,0,0,0,0,0,0,1,0] will mean digit '8'
+for i in range(0,m):	
 	y[tempY[0,i], i]= 1
 
 
@@ -114,8 +121,7 @@ out = MgradDescent(X, y , initial_theta1, initial_theta2, regconst, num_iter, al
 
 with open('output.pickle', 'wb') as f:
 	pickle.dump(out, f)
-
-
+	
 # pickle_in = open('output.pickle', 'rb')
 # out = pickle.load(pickle_in)
 
@@ -136,19 +142,6 @@ plt.plot(cost)
 plt.ylabel('cost')
 plt.xlabel('iteration')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
