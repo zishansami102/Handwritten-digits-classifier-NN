@@ -6,18 +6,16 @@ A simple python implementation of Neural Network from scratch without using any 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 
-```
 * [Numpy](http://www.numpy.org/) - Multidimensioanl Mathematical Computing 
 * [Scipy](https://docs.scipy.org/doc/) - Was used to load Mat file in Python
 * [Matplotlib](https://matplotlib.org/contents.html) - Used to plot Graph
 * [Pickle](https://docs.python.org/3/library/pickle.html) - Used to save trained models/object
 
-```
 
 ### Installing
 
