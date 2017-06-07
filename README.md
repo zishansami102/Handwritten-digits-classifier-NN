@@ -1,4 +1,4 @@
-# Simple Neural Network from scratch
+# A simple Neural Network from scratch
 
 A simple python implementation of Neural Network from scratch without using any ML/DL libraries
 
@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 Clone the repository
 
 ```
-git clone https://github.com/zishansami102/Handwritten-digits-classifier-NN
+git clone https://github.com/zishansami102/Neural-Network-from-Scratch-MNIST-Datset-
 ```
 Move into the directory and then run the following command to start training the neural network
 
